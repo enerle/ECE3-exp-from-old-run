@@ -44,10 +44,7 @@ Are you running with PISM?
 
 Are you running with fwf?
 
-        cp old_run_dir/restart/fwf/leg/* to new_run_dir/fwf/interactive/forcing_files/
-
-create link: 
-        
+        cp old_run_dir/restart/fwf/leg/* to new_run_dir/fwf/interactive/forcing_files/        
         ln -s fwf/interactive/forcing_files/ FWF_LRF_yYYYY.nc new_run_dir/freshwater_forcing_yYYYY.nc   where yYYYY is the year when your new experiment starts. Note the "y" in front of the year, e.g. y2100.
 
 That should be all, you can then try to submit a 1-yr job and see if everything works fine. PISM and FWF are run after the first year has finished so you have to wait to be sure that they work fine, too.
