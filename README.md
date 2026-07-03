@@ -31,21 +31,21 @@ Are you running with PISCES?
 
 Are your running with LPJG?
         
-        cp -R old_run_dir/restart/lpjg/leg-1 to your new_run_dir/restart/lpjg
-        ln -s old_run_dir/restart/oasis/leg-1 to your new_run_dir/restart/oasis
+        cp -R old_run_dir/restart/lpjg/leg-1  new_run_dir/restart/lpjg
+        ln -s old_run_dir/restart/oasis/leg-1 new_run_dir/restart/oasis
 
 Are you running with co2box?
         
-        cp old_run_dir/restart/co2box/leg-1/* to your new_run_dir
+        cp old_run_dir/restart/co2box/leg-1/* new_run_dir
 
 Are you running with PISM?
 
-    mkdir new_run_dir/pism_grtes/pism_YYYY       #where YYYY is the year just _before_ your new experiment is supposed to start
-    cp old_run_dir/restart/pism_grtes/leg/* to new_run_dir/pism_grtes/pism_YYYY
+    mkdir new_run_dir/pism_grtes/pism_YYYY  #where YYYY is the year just _before_ your new experiment is supposed to start
+    cp old_run_dir/restart/pism_grtes/leg/* new_run_dir/pism_grtes/pism_YYYY
 
 Are you running with fwf?
 
-        cp old_run_dir/restart/fwf/leg/* to new_run_dir/fwf/interactive/forcing_files/        
-        ln -s fwf/interactive/forcing_files/ FWF_LRF_yYYYY.nc new_run_dir/freshwater_forcing_yYYYY.nc   where yYYYY is the year when your new experiment starts. Note the "y" in front of the year, e.g. y2100.
+        cp old_run_dir/restart/fwf/leg/* new_run_dir/fwf/interactive/forcing_files/        
+        ln -s fwf/interactive/forcing_files/ FWF_LRF_yYYYY.nc new_run_dir/freshwater_forcing_yYYYY.nc  #where yYYYY is the year when your new experiment starts. Note the "y" in front of the year, e.g. y2100.
 
-That should be all, you can then try to submit a 1-yr job and see if everything works fine. PISM and FWF are run after the first year has finished so you have to wait to be sure that they work fine, too.
+Submit a 1-yr job and see if everything works fine. PISM and FWF are run after the first year has finished so you have to wait to be sure that they work fine, too.
