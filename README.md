@@ -18,11 +18,12 @@ Once you have come that far you can start filling the new run_dir with restart f
 
 edit this file so that the last entry contains only the lines up to the year _before_ your new run starts (e.g. if you plan to start at leg=201 you should delete all entries with leg>= 201, the last entry in ece.info would be for leg=200)
 
-       cp old_run_dir/restart/ifs/leg/rcf new run_dir
-       ln -s old_run_dir/restart/ifs/leg/srf* to your new run_dir
-       ln -s old_run_dir/restart/nemo/leg/srf* to your new run_dir
-       ln -s old_run_dir/restart/oasis/leg/* to your new run_dir
-       mkdir -p new_run_dir/restart/{oasis,lpjg}
+       cd new run_dir
+       cp old_run_dir/restart/ifs/leg/rcf .
+       ln -s old_run_dir/restart/ifs/leg/srf* .
+       ln -s old_run_dir/restart/nemo/leg/srf* .
+       ln -s old_run_dir/restart/oasis/leg/* restart/oasis
+       mkdir -p restart/{oasis,lpjg} 
 
 Are you running with PISCES?
         
