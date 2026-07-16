@@ -22,7 +22,7 @@ edit this file so that the last entry contains only the lines up to the year _be
        cp old_run_dir/restart/ifs/leg/rcf .
        ln -s old_run_dir/restart/ifs/leg/srf* .
        ln -s old_run_dir/restart/nemo/leg/* .
-       ln -s old_run_dir/restart/oasis/leg/* restart/oasis
+       ln -s old_run_dir/restart/oasis/leg/* .  ###??restart/oasis
        mkdir -p restart/{oasis,lpjg} 
 
 Are you running with PISCES?
