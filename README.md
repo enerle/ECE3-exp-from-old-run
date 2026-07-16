@@ -49,3 +49,6 @@ Are you running with fwf?
         ln -s fwf/interactive/forcing_files/ FWF_LRF_yYYYY.nc new_run_dir/freshwater_forcing_yYYYY.nc  #where yYYYY is the year when your new experiment starts. Note the "y" in front of the year, e.g. y2100.
 
 Submit a 1-yr job and see if everything works fine. PISM and FWF are run after the first year has finished so you have to wait to be sure that they work fine, too.
+
+delete:
+        rm -f restart_{oce,ice,trc}.nc
